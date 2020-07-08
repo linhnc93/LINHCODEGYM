@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inputpointphisycal;
+        let inputpointchemitry;
+        let inputpointbiology;
+        inputpointphisycal = prompt("Enter the pointphisycal");
+        inputpointchemitry = prompt("Enter the pointchemitry");
+        inputpointbiology = prompt("Enter the pointbiology");
+        let pointphisycal = parseFloat(inputpointphisycal);
+        let pointchemitry = parseFloat(inputpointchemitry);
+        let pointbiology = parseFloat(inputpointbiology);
+        let mediumscore = (pointphisycal + pointchemitry + pointbiology)/3;
+        let toltal = pointphisycal + pointchemitry + pointbiology;
+        document.write("Điểm trung bình =" + mediumscore.toFixed(2));
+        document.write("</br>");
+        document.write("Tổng điểm ba môn =" + toltal.toFixed(2));   
+    </script>
+</body>
+</html>

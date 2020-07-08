@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="Amount" id="inputamount">
+
+        <select name="From Currency" id="from">
+            <option value="VND">VND</option>
+            <option value="USD" >USD</option>
+        </select>
+        <select name="To Currency" id="to">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select>
+        <button onclick="chuyentien()">Send</button>
+    </div>
+    <div id="result"></div>
+    <script>
+        function chuyentien(){
+            let inputamount = document.getElementById("inputamount").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+
+            console.log("from" + from)
+            console.log("to" + to)
+
+            if(from == "VND" && to == "USD"){
+                let result = inputamount/23000;
+                document.getElementById("result").innerHTML = result.toFixed(2) + "Đô la";
+            }
+            if(from == "VND" && to == "VND"){
+                let result = inputamount;
+                document.getElementById("result").innerHTML = result.toFixed(2) + "Việt Nam đồng";
+            }
+            if(from == "USD" && to == "VND"){
+                let result = inputamount*23000;
+                document.getElementById("result").innerHTML = result.toFixed(2) + "Việt Nam đồng";
+            }
+            if(from == "USD" && to == "USD"){
+                let result = inputamount;
+                document.getElementById("result").innerHTML = result.toFixed(2) + "Đô la";
+            }
+        }
+    </script>
+</body>
+</html>

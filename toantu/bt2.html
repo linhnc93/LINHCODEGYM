@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="nhietdo">
+        <select name="from" id="from">
+            <option value="f">Độ F</option>
+            <option value="c"> Độ C</option>
+        </select>
+        <select name="to" id="to">
+            <option value="f">Độ F</option>
+            <option value="c">Độ C</option>
+        </select>
+    </div>
+    <div>
+        <button onclick="cdnhietdo()"> Click here </button>
+    </div>
+    <div id="kq"> Kết quả </div>
+    <script>
+        function cdnhietdo(){
+        let nhietdo = document.getElementById("nhietdo").value;
+          //alert("nhiet do la" + nhietdo);
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        console.log("from" + from);
+        console.log("to" + to);
+        if(from == "f" && to == "c") {
+            let ketqua = 5/9*(nhietdo-32);
+            document.getElementById("kq").innerHTML = ketqua + " Độ C";
+        }
+        if(from == "c" && to == "f") {
+            let ketqua = 9/5 * nhietdo + 32;
+            document.getElementById("kq").innerHTML = ketqua + " Độ F";
+        }
+        }
+    </script>
+</body>
+</html>

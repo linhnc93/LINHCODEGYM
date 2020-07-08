@@ -1,0 +1,27 @@
+.block1 {
+    margin: 0;
+    width: 100%;
+}
+#menu {
+    float: right;
+    text-decoration: none;
+    border: 5px solid darkblue;
+    width: 50%;
+}
+.parent {
+    margin: 0;
+    width: 100%;
+}
+#left {
+    float: left;
+    width: 70%;
+}
+#right {
+    overflow: hidden;
+    width: 30%;
+}
+#logo2 {
+    width: 900px;
+    height: 600px;
+    float: right;
+}

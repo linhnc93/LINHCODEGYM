@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let usename = prompt("Nhập tài khoản ?", '');
+
+        if (usename == "Admin") {
+          alert("Nhập mật khẩu");
+        } else if (usename == null) {
+          alert("Canceled");
+        } else {
+            alert("I don't know you");
+        }
+
+      let password = prompt("Nhập mật khẩu ?", '');
+        if (password == "TheMaster") {
+          alert("Wellcome");
+        } else if (password == null) {
+          alert("Canceled!");   
+        } else {
+          alert("Wrong password")
+        }
+    </script>
+</body>
+</html>

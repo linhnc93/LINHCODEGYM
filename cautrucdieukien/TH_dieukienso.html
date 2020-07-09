@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="number">
+        <button onclick="kiemtra()">Kiểm tra</button>
+    </div>
+    <script>
+        function kiemtra() {
+            let number = parseFloat(document.getElementById("number").value);
+            // alert(number)
+            if (number > 0) {
+                alert("1");
+            } else if (number <0) {
+                alert("-1");
+            } else {
+                alert("0");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./xephinh.css">
+</head>
+<body>
+    <h1 id="tieude"> GAME XẾP HÌNH </h1>
+    <form action="" methon="post">
+         <table>
+             <tr>
+                <td> <img alt="" src="./img/ban go xep.jpg" 
+                    style="height: 85px; width: 198px" class="img" id="imgClickAndChange" onclick="changeImage()"/> </td>
+                <td> <img src="./img/ban hoc xep.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ghe do.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ghe dai.jpg" alt="" class="img"></td>
+             </tr>
+             <tr>
+                <td> <img src="./img/ghe dai.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ban hoc xep.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ghe do.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ban go xep.jpg" alt="" class="img"></td>
+             </tr>
+             <tr>
+                <td> <img src="./img/ghe dai.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ban hoc xep.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ghe do.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ban go xep.jpg" alt="" class="img"></td>
+             </tr>
+             <tr>
+                <td> <img src="./img/ban go xep.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ban hoc xep.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ghe dai.jpg" alt="" class="img"></td>
+                <td> <img src="./img/ghe do.jpg" alt="" class="img"></td>
+             </tr>
+         </table>
+
+    </form>
+    <script language="javascript">
+        let num = 0;
+        let arr = ["./img/ban hoc xep.jpg","./img/ghe dai.jpg","./img/ban hoc xep.jpg"];
+
+
+        document.getElementById("imgClickAndChange").addEventListener("click", function changeImage(){
+            let img = document.getElementById("imgClickAndChange");
+            num++;
+            if(num>=arr.length){
+                num = 0;
+            }
+            img.src = arr[num];
+        })
+        
+    </script>
+</body>
+</html>

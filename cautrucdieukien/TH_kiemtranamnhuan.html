@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ketqua">Kết quả</p>
+    <script>
+        let year = prompt("nhập vào năm?");
+        if (year%4 == 0) {
+            if (year%100 == 0) {
+                if (year%400 == 0) {
+                    document.getElementById('ketqua').innerHTML = "Năm  "+ year +'  là năm nhuận';
+                }
+                else {
+                    document.getElementById('ketqua').innerHTML = "Năm  "+ year+' không phải là năm nhuận';
+                }
+            } else {
+                document.getElementById('ketqua').innerHTML = "Năm  "+ year +'  là năm nhuận';
+            }
+        } else  {
+            document.getElementById('ketqua').innerHTML = "Năm  "+ year+' không phải là năm nhuận';
+        }  
+    </script>
+</body>
+</html>

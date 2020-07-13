@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let chieucao = parseFloat(prompt("nhập chiều cao"));
+        let cannang = parseFloat(prompt("nhập cân nặng"));
+        let bmi;
+        bmi = cannang/(chieucao**2);
+        if (bmi < 18.5) {
+            document.write("Thiếu cân nặng");
+        }
+        if (18.5 <= bmi && bmi < 25) {
+            document.write("Bình thường");
+        }
+        if (25 <= bmi && bmi < 30) {
+            document.write("Thừa cân");
+        }
+        if (30 <= bmi) {
+            document.write("Béo phì"); 
+        }
+    </script>
+</body>
+</html>

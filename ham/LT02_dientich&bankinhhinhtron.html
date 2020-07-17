@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="inputvalue" value=0 onchange="inputvalue()">
+    <button onclick="tinhdientichhinhtron(inputvalue())"> Tính diện tích</button>
+    <button onclick="tinhchuvihinhtron(inputvalue())"> Tính chu vi</button>
+    <div id="result"></div>
+    <script>
+        function inputvalue() {
+            let inputvalue = +document.getElementById("inputvalue").value;
+            return inputvalue;
+            // console.log(inputvalue);
+        }
+        function tinhdientichhinhtron(bankinh) {
+            let dientich;
+            let pi = 3.14;
+            dientich = Math.pow(bankinh,2)*pi;
+            document.getElementById("result").innerHTML = "Diện tích hình tròn = " + dientich.toFixed(2);
+        }
+        function tinhchuvihinhtron(bankinh) {
+            let chuvi;
+            let pi = 3.14;
+            chuvi = 2*bankinh*pi;
+            document.getElementById("result").innerHTML = "Chu vi hình tròn = " + chuvi.toFixed(2);
+        }
+    </script>
+</body>
+</html>

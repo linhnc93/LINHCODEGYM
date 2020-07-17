@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="tenngoisao">
+    <button onclick="timNgoisao(mang1, mang2)"> kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        let mang1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let mang2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function timNgoisao(mang1, mang2) {
+            let tenngoisao = document.getElementById("tenngoisao").value;
+            for (i = 0; i < mang1.length; i++) {
+                if (tenngoisao === mang1[i]) {
+                    document.getElementById("result").innerHTML = "Chòm sao: "+ mang2[i];
+                    break;
+                } else {
+                    document.getElementById("result").innerHTML ="Không tìm thấy ngôi sao nào, mời nhập lại";
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

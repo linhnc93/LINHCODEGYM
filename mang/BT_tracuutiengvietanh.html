@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2> Tra cứu từ điển Anh - Việt</h2>
+    <input type="text" id="nhaptiengViet">
+    <button onclick="chuyenVietAnh(tudienViet, tudienAnh)"> Việt - Anh</button>
+    <button onclick="chuyenAnhViet(tudienViet, tudienAnh)">Anh - Việt</button>
+    <input type="text" id="nhaptiengAnh">
+    
+    <script>
+        let tudienViet = ['Tên', 'Tuổi', 'Lớp'];
+        let tudienAnh = ['Name', 'Age', 'Class'];
+        let nhaptiengAnh = document.getElementById("nhaptiengAnh").value;
+        function chuyenVietAnh(tudienViet, tudienAnh){
+           let nhaptiengViet = document.getElementById("nhaptiengViet").value;
+           for (i=0; i<tudienViet.length; i++){
+               if (nhaptiengViet == tudienViet[i]) {
+                   document.getElementById("nhaptiengAnh").value = tudienAnh[i];
+                   break;
+               }
+           }
+        }
+        function chuyenAnhViet(tudienViet, tudienAnh){
+           let nhaptiengAnh = document.getElementById("nhaptiengAnh").value;
+           for (i=0; i<tudienAnh.length; i++){
+               if (nhaptiengAnh == tudienAnh[i]) {
+                   document.getElementById("nhaptiengViet").value = tudienViet[i];
+                   break;
+               }
+           }
+        }
+
+    </script>
+</body>
+</html>

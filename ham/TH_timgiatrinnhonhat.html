@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [3, 5, 1, 8, -3, 7, 8];
+        let arr2 = [7, 12, 6, 9, 20, 56, 89];
+        let arr3 = [];
+        let arr4 = [0, 0, 0, 0, 0, 0];
+        function minarr(arr) {
+            let min = arr[0];
+            let dodai = arr.length;
+            if (dodai == 0) {
+                return "Mảng rỗng";
+            } else {
+                for (i = 0; i < dodai; i++) {
+                    if (min > arr[i]) {
+                        min = arr[i];
+                    }
+                }
+                return min;
+            }
+        }
+        let result1 = minarr(arr1);
+        let result2 = minarr(arr2);
+        let result3 = minarr(arr3);
+        let result4 = minarr(arr4);
+        document.write(result1 + "<br>");
+        document.write(result2 + "<br>");
+        document.write(result3 + "<br>");
+        document.write(result4 + "<br>");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="number" value=0 onchange="tinhgiaithua()">
+    <div id="result"></div>
+    <script>
+        function tinhgiaithua() {
+            let sum = 1;
+            let num = +document.getElementById("number").value;
+            let n = num;
+            let clear = document.getElementById("number").value = '';
+            console.log(num)
+            if (!Number.isInteger(num)) {
+                alert("Không phải kiểu số");
+                clear;
+            } else {
+                if (num == 0 || num == 1) {
+                    document.getElementById("result").innerHTML = "Giai thừa của " + n + " = " + "1";
+                    clear;
+                }
+                while (num > 1) {
+                    sum *= num;
+                    num--;
+                }
+                document.getElementById("result").innerHTML = "Giai thừa của " + n + " = " + sum;
+                clear;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

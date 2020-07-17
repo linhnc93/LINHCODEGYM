@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-
     <script>
-function myFunction() {
-            let myNum = 10;
-            function showNum() {
-                        alert(myNum);
-}
-return showNum();
-}
-let callFunc = myFunction();
-myFunction();
-
+        function fun(x) {
+            x = x + 1;
+            return x;
+        }
+        let number = 1;
+        let result = fun(number);
+        alert(result);
     </script>
 </body>
-
 </html>

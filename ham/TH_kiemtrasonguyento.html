@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function kiemtraSonguyento(x) {
+            check = true;
+            if (x < 2) {
+                check = false
+            } else {
+                for (let i = 2; i < x; i++) {
+                    if (x % i == 0) {
+                        check = false;
+                        break;
+                    } else {
+                        check = true;
+                    }
+                } 
+                
+            }
+            return check;
+        }
+        let number = Number(prompt("Nhập vào số bất kỳ"));
+        kiemtraSonguyento(number);
+        if (check) {
+            document.write(number + " Là số nguyên tố");
+        } else {
+            document.write(number + " không phải số nguyên tố");
+
+        }
+    </script>
+</body>
+
+</html>

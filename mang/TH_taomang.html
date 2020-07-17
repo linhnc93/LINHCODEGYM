@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nhapvao">
+    <button value="Add" onclick="themthanhphan()">Add</button>
+    <button value="Display" onclick="hienthi()">Display</button>
+    <div id="ketqua"></div>
+    <script>
+        let x = 0;
+        let array = Array();
+        function themthanhphan() {
+            array[x] = document.getElementById("nhapvao").value;
+            alert("thành phần:" + array[x] + "đã thêm vào" + x);
+            x++;
+            document.getElementById("nhapvao").value = "";
+
+        }
+        function hienthi() {
+            let e = "<hr/>";
+            for (i = 0; i < array.length; i++) {
+                e += "thành phần thứ:" + i + " = " + array[i] + "<br/>";
+
+            }
+            document.getElementById("ketqua").innerHTML = e;
+
+        }
+    </script>
+</body>
+</html>

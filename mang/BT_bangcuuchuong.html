@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2 style="margin-left: 100px;"> BẢNG CỬU CHƯƠNG </h2>
+    <script>
+        let box = "";
+        box = box + "<table border='1px solid black'>";
+        for (i=1; i <= 9; i++) {
+            box = box + "<tr style='text-align: center;'>";
+            for (j=2; j <= 9; j++) {
+            box = box + "<td style='text-align: center;'>" + j + "x" + i + "=" + (i*j) + "</td>";
+            }
+            box = box + "</tr>";
+        }
+        box = box + "</table>";
+    document.write(box);
+    </script>
+</body>
+</html>
